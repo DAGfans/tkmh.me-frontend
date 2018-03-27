@@ -1,63 +1,17 @@
 ---
 layout: blog
-main_name: blog
-description: Blog for DAG fans.
 ---
 
 <h2 class="archiveTtl">Tag: webGL</h2>
 <section class="articles">
-    <article><a href="/blog/detail.html">
-        <div class="thumb"><img src="/dummy/thumb.png">
+    {% for post in site.posts %}
+    <article><a href="{{ post.url }}">
+        <div class="thumb"><img src="{{ post.image }}">
             <p class="detail"><span>View detail</span></p>
         </div>
-        <h2 class="ttl">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h2>
-        <p class="date">2016.06.20</p></a></article>
-    <article><a href="#">
-        <div class="thumb"><img src="/dummy/thumb.png">
-            <p class="detail"><span>View detail</span></p>
-        </div>
-        <h2 class="ttl">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h2>
-        <p class="date">2016.06.20</p></a></article>
-    <article><a href="#">
-        <div class="thumb"><img src="/dummy/thumb.png"></div>
-        <h2 class="ttl">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h2>
-        <p class="date">2016.06.20</p></a></article>
-    <article><a href="#">
-        <div class="thumb"><img src="/dummy/thumb.png"></div>
-        <h2 class="ttl">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h2>
-        <p class="date">2016.06.20</p></a></article>
-    <article><a href="#">
-        <div class="thumb"><img src="/dummy/thumb.png"></div>
-        <h2 class="ttl">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h2>
-        <p class="date">2016.06.20</p></a></article>
-    <article><a href="#">
-        <div class="thumb"><img src="/dummy/thumb.png"></div>
-        <h2 class="ttl">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h2>
-        <p class="date">2016.06.20</p></a></article>
-    <article><a href="#">
-        <div class="thumb"><img src="/dummy/thumb.png"></div>
-        <h2 class="ttl">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h2>
-        <p class="date">2016.06.20</p></a></article>
-    <article><a href="#">
-        <div class="thumb"><img src="/dummy/thumb.png"></div>
-        <h2 class="ttl">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h2>
-        <p class="date">2016.06.20</p></a></article>
-    <article><a href="#">
-        <div class="thumb"><img src="/dummy/thumb.png"></div>
-        <h2 class="ttl">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h2>
-        <p class="date">2016.06.20</p></a></article>
-    <article><a href="#">
-        <div class="thumb"><img src="/dummy/thumb.png"></div>
-        <h2 class="ttl">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h2>
-        <p class="date">2016.06.20</p></a></article>
-    <article><a href="#">
-        <div class="thumb"><img src="/dummy/thumb.png"></div>
-        <h2 class="ttl">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h2>
-        <p class="date">2016.06.20</p></a></article>
-    <article><a href="#">
-        <div class="thumb"><img src="/dummy/thumb.png"></div>
-        <h2 class="ttl">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h2>
-        <p class="date">2016.06.20</p></a></article>
+        <h2 class="ttl">{{ post.title }}</h2>
+        <p class="date">{{ post.date | date: "%Y.%m.%d"}}</p></a></article>
+    {% endfor %}
 </section>
 <div class="pagination"><span class="prev"><a href="#">&lt;</a></span><span><a href="#">1</a></span><span
         class="current"><a href="#">2</a></span><span><a href="#">3</a></span><span><a href="#">4</a></span><span

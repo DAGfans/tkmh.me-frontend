@@ -1,0 +1,53 @@
+---
+layout: blog
+
+sub_name: detail
+---
+
+<article class="main">
+    <h1 class="ttl">{{ page.title }}</h1>
+    <p class="date">{{ page.date | date: "%Y.%m.%d"}}</p>
+    <section class="category">
+        <h2 class="ttl">Category</h2>
+        <div class="categories">
+            <ul>
+                <li><a href="#">tagtag (10)</a></li>
+                <li><a href="#">tagtag (10)</a></li>
+                <li><a href="#">tagtag (10)</a></li>
+                <li><a href="#">tagtag (10)</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="tag">
+        <h2 class="ttl">Tags</h2>
+        <div class="tags">
+            <ul>
+                <li><a href="#">tagtag (10)</a></li>
+                <li><a href="#">tagtag (10)</a></li>
+                <li><a href="#">tagtag (10)</a></li>
+                <li><a href="#">tagtag (10)</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="inner">
+        <div class="body">
+            {{ content }}
+        </div>
+        <div id="disqus_thread"></div>
+    </div>
+</article>
+<h2 class="relatedTtl">Related Posts</h2>
+<section class="articles">
+    <article><a href="detail.html">
+        <div class="thumb"><img src="https://dev.tkmh.me/wp/wp-content/uploads/2016/03/thumb.png"></div>
+        <h2 class="ttl">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h2>
+        <p class="date">2016.06.20</p></a></article>
+    <article><a href="#">
+        <div class="thumb"><img src="https://dev.tkmh.me/wp/wp-content/uploads/2016/03/thumb.png"></div>
+        <h2 class="ttl">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h2>
+        <p class="date">2016.06.20</p></a></article>
+    <article><a href="#">
+        <div class="thumb"><img src="https://dev.tkmh.me/wp/wp-content/uploads/2016/03/thumb.png"></div>
+        <h2 class="ttl">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h2>
+        <p class="date">2016.06.20</p></a></article>
+</section>
