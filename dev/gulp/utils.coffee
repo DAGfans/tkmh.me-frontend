@@ -33,14 +33,14 @@ module.exports = (gulp, gulpPlugins, config)->
     createSpritesTask: (taskName, imgDir, cssDir, outputImgName = '', outputImgPath = '', compressImg = false) ->
       config.spritesTaskNames.push taskName
 
-      srcImgFiles = "#{config.srcDir}/#{imgDir}/#{config.excrusionPrefix}#{taskName}/*"
+      srcImgFiles = "#{config.srcDir}/#{imgDir}/#{config.exclusionPrefix}#{taskName}/*"
       config.filePath.img.push "!#{srcImgFiles}"
 
       gulp.task taskName, ->
 
         spriteObj =
           imgName: "#{outputImgName or taskName}.png"
-          cssName: "#{config.excrusionPrefix}#{taskName}.scss"
+          cssName: "#{config.exclusionPrefix}#{taskName}.scss"
           algorithm: 'binary-tree'
           padding: 2
           cssOpts:
@@ -285,9 +285,9 @@ module.exports = (gulp, gulpPlugins, config)->
     #
     createSrcArr: (name)->
       [].concat config.filePath[name], [
-        "!#{config.srcDir}/**/#{config.excrusionPrefix}*"
-        "!#{config.srcDir}/**/#{config.excrusionPrefix}*/"
-        "!#{config.srcDir}/**/#{config.excrusionPrefix}*/**"
+        "!#{config.srcDir}/**/#{config.exclusionPrefix}*"
+        "!#{config.srcDir}/**/#{config.exclusionPrefix}*/"
+        "!#{config.srcDir}/**/#{config.exclusionPrefix}*/**"
       ]
 
 

@@ -17,7 +17,7 @@ module.exports = (devDir)->
     serverDefaultPath: '/'
 
     # タスクから除外するためのプレフィックス
-    excrusionPrefix: '_'
+    exclusionPrefix: '_'
 
     # ライブラリを格納するディレクトリ名
     libraryDirName: 'lib'
@@ -43,7 +43,7 @@ module.exports = (devDir)->
       css: false
 
       # JSを圧縮するかどうか
-      js: true
+      js: false
 
     # sourcemapを作るかどうか
     sourcemap: true
@@ -68,24 +68,24 @@ module.exports = (devDir)->
       "!#{config.srcDir}/**/#{config.imgDirName}/**"
     ]
     pugInclude: [
-      "#{config.srcDir}/**/#{config.excrusionPrefix}*/**/*.pug"
-      "#{config.srcDir}/**/#{config.excrusionPrefix}*.pug"
-      "#{config.srcDir}/**/#{config.excrusionPrefix}*/**/*.jade"
-      "#{config.srcDir}/**/#{config.excrusionPrefix}*.jade"
+      "#{config.srcDir}/**/#{config.exclusionPrefix}*/**/*.pug"
+      "#{config.srcDir}/**/#{config.exclusionPrefix}*.pug"
+      "#{config.srcDir}/**/#{config.exclusionPrefix}*/**/*.jade"
+      "#{config.srcDir}/**/#{config.exclusionPrefix}*.jade"
     ]
     jadeInclude: [
-      "#{config.srcDir}/**/#{config.excrusionPrefix}*/**/*.pug"
-      "#{config.srcDir}/**/#{config.excrusionPrefix}*.pug"
-      "#{config.srcDir}/**/#{config.excrusionPrefix}*/**/*.jade"
-      "#{config.srcDir}/**/#{config.excrusionPrefix}*.jade"
+      "#{config.srcDir}/**/#{config.exclusionPrefix}*/**/*.pug"
+      "#{config.srcDir}/**/#{config.exclusionPrefix}*.pug"
+      "#{config.srcDir}/**/#{config.exclusionPrefix}*/**/*.jade"
+      "#{config.srcDir}/**/#{config.exclusionPrefix}*.jade"
     ]
     sassInclude: [
-      "#{config.srcDir}/**/#{config.excrusionPrefix}*/**/*.{sass,scss}"
-      "#{config.srcDir}/**/#{config.excrusionPrefix}*.{sass,scss}"
+      "#{config.srcDir}/**/#{config.exclusionPrefix}*/**/*.{sass,scss}"
+      "#{config.srcDir}/**/#{config.exclusionPrefix}*.{sass,scss}"
     ]
     coffeeInclude: [
-      "#{config.srcDir}/**/#{config.excrusionPrefix}*/**/*.coffee"
-      "#{config.srcDir}/**/#{config.excrusionPrefix}*.coffee"
+      "#{config.srcDir}/**/#{config.exclusionPrefix}*/**/*.coffee"
+      "#{config.srcDir}/**/#{config.exclusionPrefix}*.coffee"
     ]
 
   return config

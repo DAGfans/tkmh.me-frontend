@@ -22,9 +22,9 @@ module.exports = (gulp, gulpPlugins, config, utils)->
             bowerJson: 'bower.json'
         .pipe gulpPlugins.plumber errorHandler: utils.errorHandler
         .pipe cssFilter
-        .pipe gulp.dest "#{config.srcDir}/#{config.assetsDir}/css/#{config.excrusionPrefix}#{config.libraryDirName}"
+        .pipe gulp.dest "#{config.srcDir}/#{config.assetsDir}/css/#{config.exclusionPrefix}#{config.libraryDirName}"
         .pipe cssFilter.restore
         .pipe jsFilter
-        .pipe gulp.dest "#{config.srcDir}/#{config.assetsDir}/js/#{config.excrusionPrefix}#{config.libraryDirName}"
+        .pipe gulp.dest "#{config.srcDir}/#{config.assetsDir}/js/#{config.exclusionPrefix}#{config.libraryDirName}"
         .pipe jsFilter.restore
         .pipe gulpPlugins.debug title: gulpPlugins.util.colors.cyan('[bower]:')

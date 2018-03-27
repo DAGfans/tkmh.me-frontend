@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+<header class="contentsTtl">
+    <h1>{{ page.main_name | capitalize }}</h1>
+    <h2>{{ page.description }}</h2>
+</header>
+<section class="hasCategories" id="searchPanel">
+    <p class="btnCategories closed"><a href="#">Categories</a></p>
+    <div class="categories closed">
+        <ul>
+            <li><a href="#">category (10)</a></li>
+            <li><a href="#">category (10)</a></li>
+            <li><a href="#">category (10)</a></li>
+        </ul>
+    </div>
+    <p class="btnTags closed"><a href="#">Tags</a></p>
+    <div class="tags closed">
+        <ul>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+            <li><a href="#">tagtag (10)</a></li>
+        </ul>
+    </div>
+    <p class="btnMonthlyArchives closed"><a href="#">Monthly Archives</a></p>
+    <div class="monthlyArchives closed">
+        <ul>
+            <li><a href="#"><span class="year">2016</span><span class="month">06</span></a></li>
+            <li><a href="#"><span class="year">2016</span><span class="month">05</span></a></li>
+            <li><a href="#"><span class="year">2016</span><span class="month">04</span></a></li>
+            <li><a href="#"><span class="year">2016</span><span class="month">03</span></a></li>
+            <li><a href="#"><span class="year">2016</span><span class="month">02</span></a></li>
+            <li><a href="#"><span class="year">2016</span><span class="month">01</span></a></li>
+        </ul>
+    </div>
+    <p class="btnKeyword closed"><a href="#">Keyword</a></p>
+    <div class="keyword closed">
+        <form>
+            <input type="text"/>
+            <p class="btnSubmit"><a href="#">Search</a></p>
+        </form>
+    </div>
+    <p class="btnBack"><a href="#">Back</a></p>
+</section>
+<div class="inner">
+    {{ content }}
+</div>
