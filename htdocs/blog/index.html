@@ -1,18 +1,26 @@
 ---
-layout: blog
+layout: archive
 ---
 
-<h2 class="archiveTtl">Tag: webGL</h2>
-<section class="articles">
-    {% for post in site.posts %}
-    <article><a href="{{ post.url }}">
-        <div class="thumb"><img src="{{ post.image }}">
-            <p class="detail"><span>View detail</span></p>
-        </div>
-        <h2 class="ttl">{{ post.title }}</h2>
-        <p class="date">{{ post.date | date: "%Y.%m.%d"}}</p></a></article>
+
+<div class="pagination">
+    {% if paginator.previous_page %}
+    <span class="prev"><a href="{{ paginator.previous_page_path }}">&lt;</a></span>
+    {% endif %}
+
+    <span {% if paginator.page== 1 %}class="current" {% endif %}>
+        <a href="/blog">1</a>
+    </span>
+
+    {% for p in (2..paginator.total_pages) %}
+    <span {% if paginator.page== p %}class="current" {% endif %}>
+        <a href="/blog/page/{{ p }}">{{ p }}</a>
+    </span>
     {% endfor %}
-</section>
-<div class="pagination"><span class="prev"><a href="#">&lt;</a></span><span><a href="#">1</a></span><span
-        class="current"><a href="#">2</a></span><span><a href="#">3</a></span><span><a href="#">4</a></span><span
-        class="extend">...</span><span><a href="#">16</a></span><span class="next"><a href="#">&gt;</a></span></div>
+    <!-- span class="extend">...</span><span><a href="#">16</a></span -->
+
+    {% if paginator.next_page %}
+    <span class="next"><a href="{{ paginator.next_page_path }}">&gt;</a></span>
+    {% endif %}
+
+</div>

@@ -11,10 +11,9 @@ sub_name: detail
         <h2 class="ttl">Category</h2>
         <div class="categories">
             <ul>
-                <li><a href="#">tagtag (10)</a></li>
-                <li><a href="#">tagtag (10)</a></li>
-                <li><a href="#">tagtag (10)</a></li>
-                <li><a href="#">tagtag (10)</a></li>
+                {% for category in site.categories %}
+                <li><a href="/blog/categories/{{category[0]}}">{{ category[0] }} </a></li>
+                {% endfor %}
             </ul>
         </div>
     </section>
@@ -22,10 +21,9 @@ sub_name: detail
         <h2 class="ttl">Tags</h2>
         <div class="tags">
             <ul>
-                <li><a href="#">tagtag (10)</a></li>
-                <li><a href="#">tagtag (10)</a></li>
-                <li><a href="#">tagtag (10)</a></li>
-                <li><a href="#">tagtag (10)</a></li>
+                {% for tag in site.tags %}
+                <li><a href="/blog/tags/{{tag[0]}}">{{ tag[0] }} </a></li>
+                {% endfor %}
             </ul>
         </div>
     </section>
